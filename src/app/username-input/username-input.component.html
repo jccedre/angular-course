@@ -1,0 +1,18 @@
+<div class="grid-x">
+  <div class="cell small-6">
+    <p>Input a username here: </p>
+    <input type="text" [(ngModel)]="username" (keyup)="onUpdateUsername(username)">
+  </div>
+  <div class="cell small-6">
+    <p>Name: </p>
+    <p>{{ username }}</p>
+  </div>
+  <div class="cell small-12">
+    <div class="cell small-6">
+      <button type="button" name="button"
+      class="button primary"
+      [disabled]="!allowUsernameReset"
+      (click)="onUsernameReset()">Reset Username</button>
+    </div>
+  </div>
+</div>
