@@ -1,0 +1,8 @@
+<button class="button" type="button" name="button" (click)="onButtonClick()">Display Details</button>
+<p *ngIf="buttonToggle">
+  paragraph works!
+  Secret Password  = tuna
+</p>
+<p *ngFor="let buttonClick of buttonClicks; let i = index"
+    [ngStyle]="{backgroundColor: getColor(i)}"
+    [ngClass]="{'font--white': i >= 5}">{{buttonClick}}</p>
